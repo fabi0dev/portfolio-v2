@@ -1,4 +1,6 @@
-import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { Binoculars, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface ProjectCardProps {
@@ -16,11 +18,15 @@ export default function ProjectCard({
   title,
   description,
   tags,
-  image,
   link,
 }: ProjectCardProps) {
   return (
-    <div className="group relative bg-gray-900 rounded-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:border-green-400/50 hover:shadow-lg hover:shadow-green-400/10">
+    <div
+      className={cn(
+        "group relative bg-gray-900 rounded-2xl overflow-hidden border border-white/10 transition-all",
+        " duration-300 hover:border-green-400/50 hover:shadow-lg hover:shadow-green-400/10"
+      )}
+    >
       {/*  <div className="aspect-video overflow-hidden">
         <img
           src={image || "/placeholder.svg"}
@@ -29,25 +35,39 @@ export default function ProjectCard({
         />
       </div> */}
       <div className="p-6">
-        <div className="flex justify-between items-start mb-4">
-          <h3 className="text-xl font-bold">{title}</h3>
-          <Link
-            to={link}
-            className="p-2 rounded-full bg-black/20 text-green-400 opacity-0 group-hover:opacity-100 transition-opacity"
-          >
-            <ArrowUpRight className="h-4 w-4" />
-          </Link>
+        <div className="flex items-start mb-4">
+          <h3 className="text-xl font-bold group-hover:text-green-500 ">
+            {title}
+          </h3>
         </div>
         <p className="text-gray-400 mb-6">{description}</p>
         <div className="flex flex-wrap gap-2">
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="text-xs px-2 py-1 rounded-full bg-black/50 border border-white/10 text-gray-300"
+              className="text-xs px-2 py-1 rounded-full bg-black/50 border border-white/10 text-gray-300 group-hover:border-green-800 transition-all"
             >
               {tag}
             </span>
           ))}
+        </div>
+
+        <div className="mt-2 flex justify-end">
+          {link.deploy && (
+            <Link to={link.deploy} target="_blank">
+              <Button size={"icon"} className="hover:bg-black/50 rounded-lg">
+                <Binoculars className="group-hover:text-green-500 " />
+              </Button>
+            </Link>
+          )}
+
+          {link.github && (
+            <Link to={link.github} target="_blank">
+              <Button size={"icon"} className="hover:bg-black/50 rounded-lg">
+                <Github className="group-hover:text-green-500" />
+              </Button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

@@ -57,7 +57,7 @@ export default function HeroSection() {
         className="absolute  bottom-10 left-1/2"
       >
         <div className=" -translate-x-1/2 animate-bounce">
-          <a href="#about" className="text-gray-400 hover:text-white">
+          <a href="#about" className="text-gray-400 hover:text-green-500">
             <ArrowDown className="h-6 w-6" />
           </a>
         </div>
