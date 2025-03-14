@@ -50,17 +50,13 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative w-[300px] lg:w-auto mx-auto flex">
             <div
               className={cn(
                 "aspect-square overflow-hidden border-2 border-green-500 rounded-full"
               )}
             >
-              <img
-                src="/profile-pic.png"
-                alt="João Silva"
-                className=" w-full h-full"
-              />
+              <img src="/profile-pic.png" alt="João Silva" className="w-full" />
             </div>
 
             <div className="absolute bottom-4 right-0 bg-green-400 text-black p-2 text-sm rounded-lg shadow-xl">

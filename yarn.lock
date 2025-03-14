@@ -1701,6 +1701,7 @@ __metadata:
     eslint: "npm:^9.21.0"
     eslint-plugin-react-hooks: "npm:^5.1.0"
     eslint-plugin-react-refresh: "npm:^0.4.19"
+    framer-motion: "npm:^12.5.0"
     globals: "npm:^15.15.0"
     lucide-react: "npm:^0.479.0"
     postcss: "npm:^8.5.3"
@@ -1818,6 +1819,28 @@ __metadata:
   version: 4.3.7
   resolution: "fraction.js@npm:4.3.7"
   checksum: 10c0/df291391beea9ab4c263487ffd9d17fed162dbb736982dee1379b2a8cc94e4e24e46ed508c6d278aded9080ba51872f1bc5f3a5fd8d7c74e5f105b508ac28711
+  languageName: node
+  linkType: hard
+
+"framer-motion@npm:^12.5.0":
+  version: 12.5.0
+  resolution: "framer-motion@npm:12.5.0"
+  dependencies:
+    motion-dom: "npm:^12.5.0"
+    motion-utils: "npm:^12.5.0"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10c0/ac632ea3a452e473abf9adad1d6777522b1dd2ed8cf567078a9997f07a388d7b9e68a3e9c102b1807e1e88af3d83eb2eb0d9476032059f4803a0c32bded9bf74
   languageName: node
   linkType: hard
 
@@ -2377,6 +2400,22 @@ __metadata:
   bin:
     mkdirp: dist/cjs/src/bin.js
   checksum: 10c0/9f2b975e9246351f5e3a40dcfac99fcd0baa31fbfab615fe059fb11e51f10e4803c63de1f384c54d656e4db31d000e4767e9ef076a22e12a641357602e31d57d
+  languageName: node
+  linkType: hard
+
+"motion-dom@npm:^12.5.0":
+  version: 12.5.0
+  resolution: "motion-dom@npm:12.5.0"
+  dependencies:
+    motion-utils: "npm:^12.5.0"
+  checksum: 10c0/32e6029a14c23a82392253ecd5349f3d7c603edac6e214357c6657560c90dff42163b40d7a9d93cd31c6eaded39765e115a1abf137496baec27942803f4bc56e
+  languageName: node
+  linkType: hard
+
+"motion-utils@npm:^12.5.0":
+  version: 12.5.0
+  resolution: "motion-utils@npm:12.5.0"
+  checksum: 10c0/f556240efda96a4bb86b13bb0e6cad689b2665ca688b2616585a7c7db182e3b8d93377ff1fb3782ca0088a4a8aa6dd5e47e81fda5c19ab334f01812eade639ef
   languageName: node
   linkType: hard
 
@@ -3229,6 +3268,13 @@ __metadata:
   version: 0.1.13
   resolution: "ts-interface-checker@npm:0.1.13"
   checksum: 10c0/232509f1b84192d07b81d1e9b9677088e590ac1303436da1e92b296e9be8e31ea042e3e1fd3d29b1742ad2c959e95afe30f63117b8f1bc3a3850070a5142fea7
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.4.0":
+  version: 2.8.1
+  resolution: "tslib@npm:2.8.1"
+  checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
   languageName: node
   linkType: hard
 
