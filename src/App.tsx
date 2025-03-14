@@ -1,9 +1,10 @@
+import { useTheme } from "./hooks/useTheme";
+import Routers from "./routes";
+
 function App() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      Hello my new portfolio!
-    </div>
-  );
+  useTheme();
+
+  return <Routers />;
 }
 
 export default App;
