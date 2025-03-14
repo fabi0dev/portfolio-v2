@@ -17,24 +17,24 @@ export default function Header() {
           fabio<span className="text-green-400">dev</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-8">
-          <Link
-            to="#about"
+          <a
+            href="#about"
             className="text-sm hover:text-green-400 transition-colors"
           >
             Sobre
-          </Link>
-          <Link
-            to="#projects"
+          </a>
+          <a
+            href="#projects"
             className="text-sm hover:text-green-400 transition-colors"
           >
             Projetos
-          </Link>
-          <Link
-            to="#skills"
+          </a>
+          <a
+            href="#skills"
             className="text-sm hover:text-green-400 transition-colors"
           >
             Habilidades
-          </Link>
+          </a>
         </nav>
 
         <div className="flex items-center space-x-4">

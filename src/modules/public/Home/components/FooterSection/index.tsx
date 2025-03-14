@@ -9,7 +9,7 @@ export default function FooterSection() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <Link to="/" className="text-xl font-bold tracking-tighter">
-              <span className="text-green-400">dev</span>fabio
+              fabio<span className="text-green-400">dev</span>
             </Link>
             <p className="text-gray-400 mt-2">
               © {new Date().getFullYear()} Fábio Costa.

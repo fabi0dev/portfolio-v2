@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { MyLinks } from "@/data/MyLinks";
 import { cn } from "@/lib/utils";
 import { Github, Linkedin } from "lucide-react";
 import { useMemo } from "react";
@@ -7,7 +8,7 @@ import { Link } from "react-router-dom";
 export default function AboutSection() {
   const LINKS = useMemo(
     () => [
-      { href: "https://github.com", Icon: Github, label: "GitHub" },
+      { href: MyLinks.GitHub, Icon: Github, label: "GitHub" },
       {
         href: "https://linkedin.com",
         Icon: Linkedin,
@@ -20,12 +21,12 @@ export default function AboutSection() {
   const yearsExperience = new Date().getFullYear() - 2018;
 
   return (
-    <section id="about" className="py-24 bg-gray-950  flex items-center">
+    <div id="about" className="py-24 bg-gray-950  flex items-center h-screen">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-[auto_400px] gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-6 text-white">Sobre Mim</h2>
-            <div className="space-y-4 text-gray-300">
+            <h2 className="text-4xl font-bold mb-6 text-white">Sobre Mim</h2>
+            <div className="space-y-4 text-gray-300 text-lg">
               <p>
                 Sou um Desenvolvedor Full Stack com mais de {yearsExperience}{" "}
                 anos de experiência na construção de aplicações mobile e mais de{" "}
@@ -69,6 +70,6 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

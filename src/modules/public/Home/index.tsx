@@ -2,7 +2,6 @@ import { ArrowDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProjectsSection from "./components/ProjectsSection";
 import SkillsSection from "./components/SkillsSection";
-import { Link } from "react-router-dom";
 import ContactSection from "./components/ContactSection";
 import AboutSection from "./components/AboutSection";
 import Header from "./components/Header";
@@ -41,9 +40,9 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <Link to="#about" className="text-gray-400 hover:text-white">
+          <a href="#about" className="text-gray-400 hover:text-white">
             <ArrowDown className="h-6 w-6" />
-          </Link>
+          </a>
         </div>
       </section>
 

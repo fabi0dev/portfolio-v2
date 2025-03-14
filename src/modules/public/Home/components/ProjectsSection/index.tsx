@@ -5,7 +5,7 @@ import { PROJECTS } from "@/data/Projects";
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-24 bg-black">
+    <section id="projects" className="py-24 bg-black h-screen">
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
           <div>
@@ -16,7 +16,7 @@ export default function ProjectsSection() {
             </p>
           </div>
           <Button variant="link" className="text-green-400 p-0 h-auto">
-            Ver Todos os Projetos <ArrowRight className="ml-2 h-4 w-4" />
+            Ver todos <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
 
