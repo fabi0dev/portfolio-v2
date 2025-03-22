@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "ts-check": "tsc --noEmit --pretty --project tsconfig.app.json",
-    "dev": "vite",
+    "dev": "yarn ts-check && vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -20,6 +20,7 @@
     "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^7.3.0",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "3",
