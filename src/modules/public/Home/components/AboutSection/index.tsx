@@ -22,7 +22,7 @@ export default function AboutSection() {
 
   return (
     <div id="about" className="py-24 bg-gray-950  flex items-center h-screen">
-      <div className="container">
+      <div className="container w-8/12 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[auto_400px] gap-12 items-center">
           <div>
             <h2 className="text-4xl font-bold mb-6 text-white">Sobre Mim</h2>

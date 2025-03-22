@@ -27,20 +27,13 @@ export default function ProjectCard({
         " duration-300 hover:border-green-400/50 hover:shadow-lg hover:shadow-green-400/10"
       )}
     >
-      {/*  <div className="aspect-video overflow-hidden">
-        <img
-          src={image || "/placeholder.svg"}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-      </div> */}
       <div className="p-6">
-        <div className="flex items-start mb-4">
+        <div className="flex items-start mb-1">
           <h3 className="text-xl font-bold group-hover:text-green-500 ">
             {title}
           </h3>
         </div>
-        <p className="text-gray-400 mb-6">{description}</p>
+        <p className="text-gray-400 mb-6 text-sm">{description}</p>
         <div className="flex flex-wrap gap-2">
           {tags.map((tag, index) => (
             <span
@@ -52,7 +45,7 @@ export default function ProjectCard({
           ))}
         </div>
 
-        <div className="mt-2 flex justify-end">
+        <div className="mt-2 flex justify-end gap-2">
           {link.deploy && (
             <Link to={link.deploy} target="_blank">
               <Button size={"icon"} className="hover:bg-black/50 rounded-lg">

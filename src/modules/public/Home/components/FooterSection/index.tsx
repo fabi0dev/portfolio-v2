@@ -11,8 +11,9 @@ export default function FooterSection() {
             <Link to="/" className="text-xl font-bold tracking-tighter">
               fabio<span className="text-green-400">dev</span>
             </Link>
-            <p className="text-gray-400 mt-2">
-              © {new Date().getFullYear()} Fábio Costa.
+            <p className="text-gray-400 mt-1 text-sm">
+              © {new Date().getFullYear()} Fábio Costa / Desenvolvedor Full
+              Stack
             </p>
           </div>
           <div className="flex space-x-6">

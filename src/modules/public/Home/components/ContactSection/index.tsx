@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 export default function ContactSection() {
   return (
     <section id="contact" className="py-24 bg-black">
-      <div className="container">
+      <div className="container w-8/12 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Entre em Contato</h2>
           <p className="text-gray-400">

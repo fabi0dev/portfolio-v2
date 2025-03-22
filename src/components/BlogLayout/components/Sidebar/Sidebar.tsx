@@ -9,7 +9,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className="md:hidden fixed top-4 left-4 z-50">
+      <div className="md:hidden fixed top-4 left-4">
         <Button
           variant="outline"
           size="icon"
@@ -53,7 +53,7 @@ export default function Sidebar() {
                 className="border-[4px] border-black rounded-full w-[60px] mx-auto"
               />
               <div className="text-xs font-bold">
-                @fabio<span>dev</span>
+                @fabio<span className="text-green-500">dev</span>
               </div>
             </div>
           </Link>
@@ -67,8 +67,8 @@ export default function Sidebar() {
           </div> */}
 
           <div className="mt-auto pt-6 flex justify-between items-center">
-            <span className="text-sm text-foreground/50">
-              © {new Date().getFullYear()}
+            <span className="text-sm text-foreground/80">
+              © {new Date().getFullYear()} Fábio Costa
             </span>
             <ModeToggle />
           </div>

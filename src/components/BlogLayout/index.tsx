@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Footer from "./components/Footer";
 import { Helmet } from "react-helmet-async";
 import { Site } from "@/data/Site";
 import { cn } from "@/lib/utils";
@@ -8,16 +7,21 @@ import { cn } from "@/lib/utils";
 interface BlogLayoutProps {
   children: ReactNode;
   title?: string;
+  description?: string;
 }
 
-export default function BlogLayout({ title = "", children }: BlogLayoutProps) {
+export default function BlogLayout({
+  title = "",
+  description,
+  children,
+}: BlogLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col md:flex-row">
       <Helmet>
         <title>
           {title} {title && "|"} {Site.Title} / Blog
         </title>
-        {/*   <meta name="description" content={description} /> */}
+        {description && <meta name="description" content={description} />}
       </Helmet>
 
       {title && <Sidebar />}
@@ -51,7 +55,6 @@ export default function BlogLayout({ title = "", children }: BlogLayoutProps) {
         <div className="h-[50px]"></div>
 
         <main className="flex-1">{children}</main>
-        <Footer />
       </div>
     </div>
   );

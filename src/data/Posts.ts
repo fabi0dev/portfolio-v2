@@ -1,5 +1,16 @@
 export const Posts = [
   {
+    title: "React Native 0.78 Lançado com Suporte ao React 19",
+    slug: "react-native-0-78-lancado-com-suporte-ao-react-19",
+    date: "2025-02-19",
+    image:
+      "https://cdn.sanity.io/images/siias52v/staging/118be37fb8feadca89aae899b9d7168276b2b0e5-2400x1350.png?auto=format&fit=max&q=75&w=1200",
+    excerpt:
+      "A versão 0.78 do React Native introduz o React 19 e melhorias significativas.",
+    content:
+      "A equipe do React Native anunciou o lançamento da versão 0.78, que incorpora o React 19 e traz recursos como suporte nativo para Android Vector Drawables e melhor integração para iOS. Essa atualização visa aprimorar o desempenho e a experiência de desenvolvimento.",
+  },
+  {
     title: "A Era da Convergência Tecnológica: O que Esperar de 2025",
     slug: "era-convergencia-tecnologica-2025",
     date: "2025-03-13",

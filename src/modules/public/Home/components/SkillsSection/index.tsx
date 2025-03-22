@@ -4,7 +4,7 @@ import SkillBadge from "./components/SkillBadge";
 export default function SkillsSection() {
   return (
     <section id="skills" className="py-24 bg-gray-950">
-      <div className="container">
+      <div className="container w-8/12 mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center">
           Habilidades & Tecnologias
         </h2>

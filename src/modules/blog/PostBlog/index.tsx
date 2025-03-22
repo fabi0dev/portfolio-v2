@@ -7,6 +7,7 @@ import { Posts } from "@/data/Posts";
 import { Button } from "@/components/ui/button";
 import { formatDate } from "@/lib/utils";
 import BlogLayout from "@/components/BlogLayout";
+import { ArrowLeft } from "lucide-react";
 
 export default function PostBlog() {
   const { slug } = useParams<{ slug: string }>();
@@ -17,7 +18,7 @@ export default function PostBlog() {
       <div className="container mx-auto px-4 py-12 text-center">
         <h1 className="text-2xl font-bold mb-4">Post não encontrado</h1>
         <Button asChild>
-          <Link to="/">Voltar para a página inicial</Link>
+          <Link to="/blog">Página inicial</Link>
         </Button>
       </div>
     );
@@ -28,7 +29,7 @@ export default function PostBlog() {
       <div className="container mx-auto py-12 max-w-4xl">
         <Button variant="ghost" asChild className="mb-8 gap-1">
           <a href="../">
-            <ArrowLeftIcon className="h-4 w-4" /> Voltar para o blog
+            <ArrowLeft className="h-4 w-4" /> Voltar
           </a>
         </Button>
 
@@ -70,7 +71,7 @@ export default function PostBlog() {
               .map((relatedPost) => (
                 <Link
                   key={relatedPost.slug}
-                  to={`/posts/${relatedPost.slug}`}
+                  to={`/blog/post/${relatedPost.slug}`}
                   className="group"
                 >
                   <div className="relative h-40 w-full mb-4 overflow-hidden rounded-lg">
@@ -92,25 +93,5 @@ export default function PostBlog() {
         </div>
       </div>
     </BlogLayout>
-  );
-}
-
-function ArrowLeftIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="m12 19-7-7 7-7" />
-      <path d="M19 12H5" />
-    </svg>
   );
 }
