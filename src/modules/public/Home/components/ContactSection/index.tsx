@@ -69,13 +69,13 @@ export default function ContactSection() {
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium">
-                    Email
+                    E-mail
                   </label>
                   <input
                     id="email"
                     type="email"
                     className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-                    placeholder="Seu email"
+                    placeholder="Seu e-mail"
                   />
                 </div>
               </div>
