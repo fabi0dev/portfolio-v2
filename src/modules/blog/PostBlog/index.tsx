@@ -1,7 +1,3 @@
-"use client";
-
-import type React from "react";
-
 import { useParams, Link } from "react-router-dom";
 import { Posts } from "@/data/Posts";
 import { Button } from "@/components/ui/button";
