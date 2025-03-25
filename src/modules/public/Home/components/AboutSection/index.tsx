@@ -21,12 +21,17 @@ export default function AboutSection() {
   const yearsExperience = new Date().getFullYear() - 2018;
 
   return (
-    <div id="about" className="py-24 bg-gray-950  flex items-center h-screen">
+    <div
+      id="about"
+      className="py-24 bg-gray-100 dark:bg-gray-950 flex items-center h-screen"
+    >
       <div className="container w-8/12 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[auto_400px] gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold mb-6 text-white">Sobre Mim</h2>
-            <div className="space-y-4 text-gray-300 text-lg">
+            <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+              Sobre Mim
+            </h2>
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 text-lg">
               <p>
                 Sou um Desenvolvedor Full Stack com mais de {yearsExperience}{" "}
                 anos de experiência na construção de aplicações mobile e mais de{" "}

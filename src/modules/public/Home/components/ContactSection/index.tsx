@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-24 bg-black">
+    <section id="contact" className="py-24 dark:bg-black">
       <div className="container w-8/12 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Entre em Contato</h2>
@@ -13,46 +13,37 @@ export default function ContactSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="bg-gray-900 p-8 rounded-2xl border border-white/10">
+          <div className="bg-gray-900/5 dark:bg-gray-900 p-8 rounded-2xl border border-white/10">
             <h3 className="text-xl font-semibold mb-6">
               Informações de Contato
             </h3>
             <div className="space-y-6">
               <div className="flex items-center">
-                <Mail className="h-5 w-5 text-green-400 mr-4" />
+                <Linkedin className="h-5 w-5 text-green-500 dark:text-green-400 mr-4" />
                 <a
-                  href="mailto:contato@exemplo.com"
-                  className="hover:text-green-400 transition-colors"
-                >
-                  contato@exemplo.com
-                </a>
-              </div>
-              <div className="flex items-center">
-                <Linkedin className="h-5 w-5 text-green-400 mr-4" />
-                <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/fabi0dev/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-green-400 transition-colors"
                 >
-                  linkedin.com/in/joaosilva
+                  linkedin.com/in/fabi0dev/
                 </a>
               </div>
               <div className="flex items-center">
-                <Github className="h-5 w-5 text-green-400 mr-4" />
+                <Github className="h-5 w-5 text-green-500 dark:text-green-400 mr-4" />
                 <a
-                  href="https://github.com"
+                  href="https://github.com/fabi0dev"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-green-400 transition-colors"
                 >
-                  github.com/joaosilva
+                  github.com/fabi0dev
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="bg-gray-900 p-8 rounded-2xl border border-white/10">
+          <div className="bg-gray-900/5 dark:bg-gray-900 p-8 rounded-2xl border border-white/10">
             <form className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
@@ -62,7 +53,7 @@ export default function ContactSection() {
                   <input
                     id="name"
                     type="text"
-                    className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+                    className="w-full px-4 py-2 dark:bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
                     placeholder="Seu nome"
                   />
                 </div>
@@ -73,7 +64,7 @@ export default function ContactSection() {
                   <input
                     id="email"
                     type="email"
-                    className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+                    className="w-full px-4 py-2 dark:bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
                     placeholder="Seu e-mail"
                   />
                 </div>
@@ -85,7 +76,7 @@ export default function ContactSection() {
                 <input
                   id="subject"
                   type="text"
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+                  className="w-full px-4 py-2 dark:bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
                   placeholder="Assunto"
                 />
               </div>
@@ -96,7 +87,7 @@ export default function ContactSection() {
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+                  className="w-full px-4 py-2 dark:bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
                   placeholder="Sua mensagem"
                 ></textarea>
               </div>

@@ -3,7 +3,10 @@ import { PROJECTS } from "@/data/Projects";
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-24 bg-black h-screen w-8/12 mx-auto">
+    <section
+      id="projects"
+      className="py-24 bg-gray-50 dark:bg-black h-screen w-8/12 mx-auto"
+    >
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
           <div>

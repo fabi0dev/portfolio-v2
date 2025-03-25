@@ -8,7 +8,7 @@ import HeroSection from "./components/HeroSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-gray-50 dark:bg-black text-gray-900 dark:text-white">
       <Header />
 
       <HeroSection />
@@ -19,7 +19,7 @@ export default function Home() {
 
       <SkillsSection />
 
-      <ContactSection />
+      {/*   <ContactSection /> */}
 
       <FooterSection />
     </div>

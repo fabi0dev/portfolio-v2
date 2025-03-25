@@ -23,13 +23,13 @@ export default function ProjectCard({
   return (
     <div
       className={cn(
-        "group relative bg-gray-900 rounded-2xl overflow-hidden border border-white/10 transition-all",
+        "group relative bg-gray-900/95 rounded-2xl overflow-hidden border border-white/10 transition-all",
         " duration-300 hover:border-green-400/50 hover:shadow-lg hover:shadow-green-400/10"
       )}
     >
       <div className="p-6">
         <div className="flex items-start mb-1">
-          <h3 className="text-xl font-bold group-hover:text-green-500 ">
+          <h3 className="text-xl font-bold text-green-500 group-hover:text-green-500 ">
             {title}
           </h3>
         </div>
