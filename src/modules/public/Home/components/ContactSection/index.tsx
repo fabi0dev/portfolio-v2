@@ -8,8 +8,7 @@ export default function ContactSection() {
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Entre em Contato</h2>
           <p className="text-gray-400">
-            Sinta-se à vontade para entrar em contato se você tem um projeto em
-            mente ou apenas quer se conectar.
+            Sinta-se à vontade para entrar em contato se você deseja se conectar
           </p>
         </div>
 
