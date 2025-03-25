@@ -1,5 +1,5 @@
 import { MyLinks } from "@/data/MyLinks";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function FooterSection() {
