@@ -9,16 +9,7 @@ export const PROJECTS = [
       deploy: "https://bixtron.vercel.app/",
     },
   },
-  {
-    title: "Aiva Assistant",
-    description: "Assistente virtual que utiliza chat OpenAI.",
-    tags: ["ReactJS", "TypeScript", "Vite"],
-    image: "ReactJS",
-    link: {
-      github: "https://github.com/fabi0dev/aiva",
-      deploy: "https://aiva-assistant.vercel.app/",
-    },
-  },
+
   {
     title: "Task Mate",
     description: "Organizador de tarefas diárias.",
@@ -29,6 +20,18 @@ export const PROJECTS = [
       deploy: "https://task-mate1.vercel.app/",
     },
   },
+
+  {
+    title: "Aiva Assistant",
+    description: "Assistente virtual que utiliza chat OpenAI.",
+    tags: ["ReactJS", "TypeScript", "Vite"],
+    image: "ReactJS",
+    link: {
+      github: "https://github.com/fabi0dev/aiva",
+      deploy: "https://aiva-assistant.vercel.app/",
+    },
+  },
+
   {
     title: "InSound App",
     description: "App mobile de música integrado com o Deezer.",
