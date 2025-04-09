@@ -1,5 +1,15 @@
 export const PROJECTS = [
   {
+    title: "Cashly",
+    description: "Sistema de gestão financeira.",
+    tags: ["ReactJS", "TypeScript", "Vite"],
+    image: "ReactJS",
+    link: {
+      github: "https://github.com/fabi0dev/cashly",
+      deploy: "https://cashly-app.vercel.app/login",
+    },
+  },
+  {
     title: "Bixtron",
     description: "Um robozinho muito legal.",
     tags: ["ReactJS", "TypeScript", "Vite"],

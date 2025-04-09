@@ -28,7 +28,7 @@ export default function HeroSection() {
           </h1>
           <h2 className="text-4xl md:text-5xl mb-8">Eu sou o Fábio!</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto">
-            Um desenvolvedor pleno, atuo na parte web e mobile, construo
+            Um desenvolvedor sênior, atuo na parte web e mobile, construo
             experiências digitais que são rápidas, acessíveis e excepcionais.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
