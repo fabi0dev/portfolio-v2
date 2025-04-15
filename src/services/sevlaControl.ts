@@ -2,7 +2,7 @@ import axios, { AxiosInstance } from "axios";
 
 const BASE_URL = "https://sevla-backend-production.up.railway.app";
 const API_KEY =
-  "c71bfc1c48e90de4992b4d874e56fdf2539711b98862e0994825361ca2338f16";
+  "c6106e6fcee25d7eff907b4ffb79bf65b5fe5d24db955c0b4ff530eb035913d8";
 
 interface ResponseData {
   success: boolean;
