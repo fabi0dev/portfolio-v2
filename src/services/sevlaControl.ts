@@ -19,9 +19,9 @@ const api: AxiosInstance = axios.create({
 });
 
 export const sevlaControl = {
-  registerVisit: async () => {
+  registerAnalytics: async () => {
     try {
-      const response = await api.post<ResponseData>("visits", {
+      const response = await api.post<ResponseData>("analytics", {
         path: window.location.pathname,
         apiKey: API_KEY,
       });
