@@ -1,76 +1,145 @@
 import { Button } from "@/components/ui/button";
 import { MyLinks } from "@/data/MyLinks";
-import { cn } from "@/lib/utils";
 import { Github, Linkedin } from "lucide-react";
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function AboutSection() {
   const LINKS = useMemo(
     () => [
       { href: MyLinks.GitHub, Icon: Github, label: "GitHub" },
-      {
-        href: "https://linkedin.com",
-        Icon: Linkedin,
-        label: "LinkedIn",
-      },
+      { href: MyLinks.Linkedin, Icon: Linkedin, label: "LinkedIn" },
     ],
     []
   );
 
   const yearsExperience = new Date().getFullYear() - 2018;
 
+  const stats = [
+    { value: `${yearsExperience + 5}+`, label: "Anos de Experiência" },
+    { value: "∞", label: "Cafés Consumidos" },
+    { value: "∞", label: "Linhas de Código Escritas" },
+  ];
+
   return (
-    <div
+    <section
       id="about"
-      className="py-24 bg-gray-100 dark:bg-gray-950 flex items-center h-screen"
+      className="relative py-32 bg-white dark:bg-gray-950 overflow-hidden"
     >
-      <div className="container w-8/12 mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[auto_400px] gap-12 items-center">
-          <div>
-            <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              Sobre Mim
-            </h2>
-            <div className="space-y-4 text-gray-700 dark:text-gray-300 text-lg">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
+      <div className="absolute inset-0 grid-pattern opacity-30" />
+
+      <div className="container relative z-10 max-w-6xl mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <span className="text-cyan-600 dark:text-cyan-400 text-sm font-medium tracking-wider uppercase">
+            Sobre mim
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold mt-3 text-gray-900 dark:text-white">
+            Quem sou eu?
+          </h2>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="relative w-72 h-72 md:w-80 md:h-80 mx-auto">
+              <div className="absolute inset-0 rounded-full border-2 border-dashed border-cyan-500/30 animate-[spin_20s_linear_infinite]" />
+              <div className="absolute inset-4 rounded-full overflow-hidden border-2 border-cyan-500 glow">
+                <img
+                  src="/profile-pic.png"
+                  alt="Fábio Costa"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-2 -right-2 bg-gradient-to-br from-cyan-500 to-cyan-600 text-white px-4 py-2 rounded-xl shadow-xl">
+                <p className="font-bold text-lg">{yearsExperience + 5}+ anos</p>
+                <p className="text-xs opacity-80">de experiência</p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <div className="space-y-5 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
               <p>
-                Sou um Desenvolvedor Full Stack com mais de {yearsExperience}{" "}
-                anos de experiência na construção de aplicações mobile e mais de{" "}
-                {yearsExperience + 5} anos com desenvolvimento web. Expert em
-                JavaScript, domino tanto o front com React e backend com
-                Node.js.
+                Sou um{" "}
+                <span className="text-cyan-600 dark:text-cyan-400 font-medium">
+                  Desenvolvedor Full Stack
+                </span>{" "}
+                com mais de {yearsExperience} anos de experiência em aplicações
+                mobile e {yearsExperience + 5} anos com desenvolvimento web.
+              </p>
+              <p>
+                Expert em{" "}
+                <span className="text-gray-900 dark:text-white font-medium">
+                  JavaScript/TypeScript
+                </span>
+                , domino tanto o frontend com{" "}
+                <span className="text-cyan-600 dark:text-cyan-400">React</span>{" "}
+                e{" "}
+                <span className="text-cyan-600 dark:text-cyan-400">
+                  React Native
+                </span>
+                , quanto o backend com{" "}
+                <span className="text-cyan-600 dark:text-cyan-400">
+                  Node.js
+                </span>
+                .
               </p>
             </div>
-            <div className="mt-8 flex space-x-4">
+
+            <div className="flex gap-3 mt-8">
               {LINKS.map(({ href, Icon, label }) => (
                 <Link key={label} to={href} target="_blank">
                   <Button
-                    variant="ghost"
-                    className="rounded-full hover:text-green-400 hover:bg-green-400/10"
+                    variant="outline"
+                    size="icon"
+                    className="rounded-xl border-gray-200 dark:border-gray-800 hover:border-cyan-500/50 hover:bg-cyan-500/10 hover:text-cyan-500 dark:hover:text-cyan-400 transition-all duration-300"
                   >
-                    <Icon className="h-7 w-7" />
+                    <Icon className="h-5 w-5" />
                     <span className="sr-only">{label}</span>
                   </Button>
                 </Link>
               ))}
             </div>
-          </div>
-
-          <div className="relative w-[300px] lg:w-auto mx-auto flex">
-            <div
-              className={cn(
-                "aspect-square overflow-hidden border-2 border-green-500 rounded-full"
-              )}
-            >
-              <img src="/profile-pic.png" alt="João Silva" className="w-full" />
-            </div>
-
-            <div className="absolute bottom-4 right-0 bg-green-400 text-black p-2 text-sm rounded-lg shadow-xl">
-              <p className="font-bold">{yearsExperience + 5}+ Anos</p>
-              <p className="text-sm">Experiência</p>
-            </div>
-          </div>
+          </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="grid grid-cols-3 gap-8 mt-20 pt-16 border-t border-gray-200 dark:border-gray-800"
+        >
+          {stats.map((stat, i) => (
+            <div key={i} className="text-center">
+              <p className="text-3xl md:text-4xl font-bold text-cyan-600 dark:text-cyan-400">
+                {stat.value}
+              </p>
+              <p className="text-sm text-gray-400 dark:text-gray-500 mt-1">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }

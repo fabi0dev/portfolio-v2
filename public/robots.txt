@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fabiodev.com.br/sitemap.xml
+

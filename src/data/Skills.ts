@@ -4,6 +4,7 @@ export const SKILLS = [
     skills: [
       "React",
       "React Native",
+      "NextJS",
       "HTML5",
       "CSS3",
       "JavaScript",
@@ -16,7 +17,7 @@ export const SKILLS = [
   },
   {
     category: "Desenvolvimento Backend",
-    skills: ["Node.js", "NestJS", "PostgreSQL", "MySQL", "Prisma"],
+    skills: ["NestJS", "Node.js", "PostgreSQL", "MySQL", "Prisma"],
   },
   {
     category: "Ferramentas & Práticas",

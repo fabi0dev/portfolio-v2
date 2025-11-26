@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Binoculars, Github } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface ProjectCardProps {
@@ -23,44 +23,61 @@ export default function ProjectCard({
   return (
     <div
       className={cn(
-        "group relative bg-gray-900/95 rounded-2xl overflow-hidden border border-white/10 transition-all",
-        " duration-300 hover:border-green-400/50 hover:shadow-lg hover:shadow-green-400/10"
+        "group relative h-full bg-white dark:bg-gray-950/50 backdrop-blur-sm rounded-2xl overflow-hidden",
+        "border border-gray-200 dark:border-gray-800 transition-all duration-500",
+        "hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10",
+        "hover:-translate-y-1"
       )}
     >
-      <div className="p-6">
-        <div className="flex items-start mb-1">
-          <h3 className="text-xl font-bold text-green-500 group-hover:text-green-500 ">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/0 to-transparent group-hover:via-cyan-500 transition-all duration-500" />
+
+      <div className="p-6 flex flex-col h-full">
+        <div className="flex items-start justify-between mb-3">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
             {title}
           </h3>
+          <div className="flex gap-1">
+            {link.deploy && (
+              <Link to={link.deploy} target="_blank">
+                <Button
+                  size="icon"
+                  variant="ghost"
+                  className="h-8 w-8 text-gray-400 dark:text-gray-500 hover:text-cyan-500 dark:hover:text-cyan-400 hover:bg-cyan-500/10"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                </Button>
+              </Link>
+            )}
+            {link.github && (
+              <Link to={link.github} target="_blank">
+                <Button
+                  size="icon"
+                  variant="ghost"
+                  className="h-8 w-8 text-gray-400 dark:text-gray-500 hover:text-cyan-500 dark:hover:text-cyan-400 hover:bg-cyan-500/10"
+                >
+                  <Github className="h-4 w-4" />
+                </Button>
+              </Link>
+            )}
+          </div>
         </div>
-        <p className="text-gray-400 mb-6 text-sm">{description}</p>
-        <div className="flex flex-wrap gap-2">
+
+        <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed flex-1">{description}</p>
+
+        <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-100 dark:border-gray-800/50">
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="text-xs px-2 py-1 rounded-full bg-black/50 border border-white/10 text-gray-300 group-hover:border-green-800 transition-all"
+              className={cn(
+                "text-xs px-3 py-1 rounded-full",
+                "bg-gray-100 dark:bg-gray-800/50 text-gray-500 dark:text-gray-400",
+                "group-hover:bg-cyan-500/10 group-hover:text-cyan-600 dark:group-hover:text-cyan-400",
+                "transition-all duration-300"
+              )}
             >
               {tag}
             </span>
           ))}
-        </div>
-
-        <div className="mt-2 flex justify-end gap-2">
-          {link.deploy && (
-            <Link to={link.deploy} target="_blank">
-              <Button size={"icon"} className="hover:bg-black/50 rounded-lg">
-                <Binoculars className="group-hover:text-green-500 " />
-              </Button>
-            </Link>
-          )}
-
-          {link.github && (
-            <Link to={link.github} target="_blank">
-              <Button size={"icon"} className="hover:bg-black/50 rounded-lg">
-                <Github className="group-hover:text-green-500" />
-              </Button>
-            </Link>
-          )}
         </div>
       </div>
     </div>

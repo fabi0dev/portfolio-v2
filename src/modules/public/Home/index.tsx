@@ -7,19 +7,12 @@ import HeroSection from "./components/HeroSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black text-gray-900 dark:text-white">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-white overflow-x-hidden">
       <Header />
-
       <HeroSection />
-
       <AboutSection />
-
       <ProjectsSection />
-
       <SkillsSection />
-
-      {/*   <ContactSection /> */}
-
       <FooterSection />
     </div>
   );
