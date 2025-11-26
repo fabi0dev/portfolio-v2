@@ -17,7 +17,7 @@ export default function SkillBadge({ name, delay = 0 }: SkillBadgeProps) {
       className={cn(
         "px-4 py-2 rounded-lg text-sm cursor-default",
         "bg-white dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/50",
-        "hover:bg-cyan-500/10 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500/50",
+        "hover:bg-emerald-500/10 hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-500/50",
         "transition-all duration-300"
       )}
     >

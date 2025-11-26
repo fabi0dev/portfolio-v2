@@ -10,7 +10,7 @@ export default function FooterSection() {
 
   return (
     <footer className="relative py-12 bg-gray-50 dark:bg-gray-950">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
 
       <div className="container max-w-6xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -19,14 +19,14 @@ export default function FooterSection() {
               to="/"
               className="text-xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
-              fabio<span className="text-cyan-500 dark:text-cyan-400">dev</span>
-              <span className="text-cyan-500 dark:text-cyan-400 animate-pulse">
+              fabio<span className="text-emerald-500 dark:text-emerald-400">dev</span>
+              <span className="text-emerald-500 dark:text-emerald-400 animate-pulse">
                 _
               </span>
             </Link>
             <p className="text-gray-400 dark:text-gray-500 mt-2 text-sm flex items-center gap-1 justify-center md:justify-start">
               Feito com{" "}
-              <Heart className="h-3 w-3 text-cyan-500 fill-cyan-500" /> por
+              <Heart className="h-3 w-3 text-emerald-500 fill-emerald-500" /> por
               Fábio Costa
             </p>
           </div>
@@ -38,7 +38,7 @@ export default function FooterSection() {
                 to={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg text-gray-400 dark:text-gray-500 hover:text-cyan-500 dark:hover:text-cyan-400 hover:bg-cyan-500/10 transition-all duration-300"
+                className="p-2 rounded-lg text-gray-400 dark:text-gray-500 hover:text-emerald-500 dark:hover:text-emerald-400 hover:bg-emerald-500/10 transition-all duration-300"
               >
                 <Icon className="h-5 w-5" />
                 <span className="sr-only">{label}</span>

@@ -25,15 +25,15 @@ export default function ProjectCard({
       className={cn(
         "group relative h-full bg-white dark:bg-gray-950/50 backdrop-blur-sm rounded-2xl overflow-hidden",
         "border border-gray-200 dark:border-gray-800 transition-all duration-500",
-        "hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10",
+        "hover:border-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/10",
         "hover:-translate-y-1"
       )}
     >
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/0 to-transparent group-hover:via-cyan-500 transition-all duration-500" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/0 to-transparent group-hover:via-emerald-500 transition-all duration-500" />
 
       <div className="p-6 flex flex-col h-full">
         <div className="flex items-start justify-between mb-3">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
             {title}
           </h3>
           <div className="flex gap-1">
@@ -42,7 +42,7 @@ export default function ProjectCard({
                 <Button
                   size="icon"
                   variant="ghost"
-                  className="h-8 w-8 text-gray-400 dark:text-gray-500 hover:text-cyan-500 dark:hover:text-cyan-400 hover:bg-cyan-500/10"
+                  className="h-8 w-8 text-gray-400 dark:text-gray-500 hover:text-emerald-500 dark:hover:text-emerald-400 hover:bg-emerald-500/10"
                 >
                   <ExternalLink className="h-4 w-4" />
                 </Button>
@@ -53,7 +53,7 @@ export default function ProjectCard({
                 <Button
                   size="icon"
                   variant="ghost"
-                  className="h-8 w-8 text-gray-400 dark:text-gray-500 hover:text-cyan-500 dark:hover:text-cyan-400 hover:bg-cyan-500/10"
+                  className="h-8 w-8 text-gray-400 dark:text-gray-500 hover:text-emerald-500 dark:hover:text-emerald-400 hover:bg-emerald-500/10"
                 >
                   <Github className="h-4 w-4" />
                 </Button>
@@ -71,7 +71,7 @@ export default function ProjectCard({
               className={cn(
                 "text-xs px-3 py-1 rounded-full",
                 "bg-gray-100 dark:bg-gray-800/50 text-gray-500 dark:text-gray-400",
-                "group-hover:bg-cyan-500/10 group-hover:text-cyan-600 dark:group-hover:text-cyan-400",
+                "group-hover:bg-emerald-500/10 group-hover:text-emerald-600 dark:group-hover:text-emerald-400",
                 "transition-all duration-300"
               )}
             >

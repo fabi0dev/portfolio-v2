@@ -27,7 +27,7 @@ export default function AboutSection() {
       id="about"
       className="relative py-32 bg-white dark:bg-gray-950 overflow-hidden"
     >
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
       <div className="absolute inset-0 grid-pattern opacity-30" />
 
       <div className="container relative z-10 max-w-6xl mx-auto px-4">
@@ -38,7 +38,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-cyan-600 dark:text-cyan-400 text-sm font-medium tracking-wider uppercase">
+          <span className="text-emerald-600 dark:text-emerald-400 text-sm font-medium tracking-wider uppercase">
             Sobre mim
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-3 text-gray-900 dark:text-white">
@@ -55,15 +55,15 @@ export default function AboutSection() {
             className="relative"
           >
             <div className="relative w-72 h-72 md:w-80 md:h-80 mx-auto">
-              <div className="absolute inset-0 rounded-full border-2 border-dashed border-cyan-500/30 animate-[spin_20s_linear_infinite]" />
-              <div className="absolute inset-4 rounded-full overflow-hidden border-2 border-cyan-500 glow">
+              <div className="absolute inset-0 rounded-full border-2 border-dashed border-emerald-500/30 animate-[spin_20s_linear_infinite]" />
+              <div className="absolute inset-4 rounded-full overflow-hidden border-2 border-emerald-500 glow">
                 <img
                   src="/profile-pic.png"
                   alt="Fábio Costa"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-2 -right-2 bg-gradient-to-br from-cyan-500 to-cyan-600 text-white px-4 py-2 rounded-xl shadow-xl">
+              <div className="absolute -bottom-2 -right-2 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white px-4 py-2 rounded-xl shadow-xl">
                 <p className="font-bold text-lg">{yearsExperience + 5}+ anos</p>
                 <p className="text-xs opacity-80">de experiência</p>
               </div>
@@ -79,7 +79,7 @@ export default function AboutSection() {
             <div className="space-y-5 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
               <p>
                 Sou um{" "}
-                <span className="text-cyan-600 dark:text-cyan-400 font-medium">
+                <span className="text-emerald-600 dark:text-emerald-400 font-medium">
                   Desenvolvedor Full Stack
                 </span>{" "}
                 com mais de {yearsExperience} anos de experiência em aplicações
@@ -91,13 +91,13 @@ export default function AboutSection() {
                   JavaScript/TypeScript
                 </span>
                 , domino tanto o frontend com{" "}
-                <span className="text-cyan-600 dark:text-cyan-400">React</span>{" "}
+                <span className="text-emerald-600 dark:text-emerald-400">React</span>{" "}
                 e{" "}
-                <span className="text-cyan-600 dark:text-cyan-400">
+                <span className="text-emerald-600 dark:text-emerald-400">
                   React Native
                 </span>
                 , quanto o backend com{" "}
-                <span className="text-cyan-600 dark:text-cyan-400">
+                <span className="text-emerald-600 dark:text-emerald-400">
                   Node.js
                 </span>
                 .
@@ -110,7 +110,7 @@ export default function AboutSection() {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="rounded-xl border-gray-200 dark:border-gray-800 hover:border-cyan-500/50 hover:bg-cyan-500/10 hover:text-cyan-500 dark:hover:text-cyan-400 transition-all duration-300"
+                    className="rounded-xl border-gray-200 dark:border-gray-800 hover:border-emerald-500/50 hover:bg-emerald-500/10 hover:text-emerald-500 dark:hover:text-emerald-400 transition-all duration-300"
                   >
                     <Icon className="h-5 w-5" />
                     <span className="sr-only">{label}</span>
@@ -130,7 +130,7 @@ export default function AboutSection() {
         >
           {stats.map((stat, i) => (
             <div key={i} className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-cyan-600 dark:text-cyan-400">
+              <p className="text-3xl md:text-4xl font-bold text-emerald-600 dark:text-emerald-400">
                 {stat.value}
               </p>
               <p className="text-sm text-gray-400 dark:text-gray-500 mt-1">

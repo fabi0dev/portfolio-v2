@@ -8,9 +8,9 @@ export default function ProjectsSection() {
       id="projects"
       className="relative py-32 bg-gray-50 dark:bg-gray-900 overflow-hidden"
     >
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
       <div className="absolute inset-0 grid-pattern opacity-20" />
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl -translate-y-1/2" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl -translate-y-1/2" />
 
       <div className="container relative z-10 max-w-6xl mx-auto px-4">
         <motion.div
@@ -20,7 +20,7 @@ export default function ProjectsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-cyan-600 dark:text-cyan-400 text-sm font-medium tracking-wider uppercase">
+          <span className="text-emerald-600 dark:text-emerald-400 text-sm font-medium tracking-wider uppercase">
             Portfólio
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-3 text-gray-900 dark:text-white">
