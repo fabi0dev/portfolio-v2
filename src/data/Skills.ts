@@ -1,41 +1,60 @@
-export const SKILLS = [
+export type SkillCategory = {
+  category: string;
+  skills: string[];
+};
+
+export type Certification = {
+  title: string;
+  provider: string;
+};
+
+export const SKILLS: SkillCategory[] = [
   {
     category: "Desenvolvimento Frontend",
     skills: [
+      "CSS3",
+      "HTML5",
+      "JavaScript",
+      "Next.js",
       "React",
       "React Native",
-      "NextJS",
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "TypeScript",
-      "Tailwind CSS",
       "Redux",
-      "Zustand",
+      "Tailwind CSS",
+      "TypeScript",
       "Vite",
+      "Zustand",
     ],
   },
   {
     category: "Desenvolvimento Backend",
-    skills: ["NestJS", "Node.js", "PostgreSQL", "MySQL", "Prisma"],
+    skills: ["MySQL", "NestJS", "Node.js", "PostgreSQL", "Prisma"],
   },
   {
     category: "Ferramentas & Práticas",
     skills: [
+      "Bitbucket",
+      "CI/CD",
+      "Docker",
       "Git",
       "GitHub",
-      "Bitbucket",
-      "Docker",
-      "CI/CD",
+      "Kanban",
       "Metodologias Ágeis",
       "Scrum",
-      "Kanban",
     ],
   },
 ];
 
-export const CERTIFICATIONS = [
-  { title: "AWS Certified Developer", provider: "Amazon Web Services" },
-  { title: "React Developer Certification", provider: "Meta" },
-  { title: "Scrum Master Certified", provider: "Scrum Alliance" },
+export const CERTIFICATIONS: Certification[] = [
+  {
+    title: "AWS Certified Developer",
+    provider: "Amazon Web Services",
+  },
+  {
+    title: "React Developer Certification",
+    provider: "Meta",
+  },
+  {
+    title: "Scrum Master Certified",
+    provider: "Scrum Alliance",
+  },
 ];

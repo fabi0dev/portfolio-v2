@@ -92,7 +92,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body>
         <script
           type="application/ld+json"
-          // JSON-LD para SEO (Google, etc.)
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
         {children}
@@ -100,5 +99,3 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </html>
   );
 }
-
-

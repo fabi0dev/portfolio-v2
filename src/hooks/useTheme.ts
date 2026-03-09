@@ -10,7 +10,9 @@ function getInitialTheme(): Theme {
   const storedTheme = window.localStorage.getItem("theme") as Theme | null;
   if (storedTheme) return storedTheme;
 
-  return "dark";
+  const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+
+  return prefersDark ? "dark" : "light";
 }
 
 export function useTheme() {
