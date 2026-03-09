@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { MyLinks } from "@/data/MyLinks";
 import { ArrowDown, ArrowRight, Linkedin } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 
 const phrases = [
@@ -110,7 +110,7 @@ export default function HeroSection() {
                 Meus Projetos <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </a>
-            <Link to={MyLinks.Linkedin} target="_blank">
+            <Link href={MyLinks.Linkedin} target="_blank">
               <Button
                 variant="outline"
                 className="border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 bg-white/50 dark:bg-gray-900/50 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-6 py-5 rounded-xl transition-all duration-300"

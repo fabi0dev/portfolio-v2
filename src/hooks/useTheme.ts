@@ -3,9 +3,13 @@ import { useEffect, useState } from "react";
 type Theme = "light" | "dark";
 
 function getInitialTheme(): Theme {
-  const storedTheme = localStorage.getItem("theme") as Theme | null;
+  if (typeof window === "undefined") {
+    return "dark";
+  }
+
+  const storedTheme = window.localStorage.getItem("theme") as Theme | null;
   if (storedTheme) return storedTheme;
-  
+
   return "dark";
 }
 

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ModeToggle } from "../ModeToggle";
 
 export default function Sidebar() {
@@ -46,7 +46,7 @@ export default function Sidebar() {
         `}
       >
         <div className="flex flex-col h-full p-6">
-          <Link to={"/blog"}>
+          <Link href="/blog">
             <div className="text-center">
               <img
                 src="/profile-pic.png"

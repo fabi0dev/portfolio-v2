@@ -1,6 +1,6 @@
 import { MyLinks } from "@/data/MyLinks";
 import { Github, Linkedin, Heart } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function FooterSection() {
   const socialLinks = [
@@ -16,7 +16,7 @@ export default function FooterSection() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <Link
-              to="/"
+              href="/"
               className="text-xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
               fabio<span className="text-emerald-500 dark:text-emerald-400">dev</span>
@@ -35,7 +35,7 @@ export default function FooterSection() {
             {socialLinks.map(({ href, Icon, label }) => (
               <Link
                 key={label}
-                to={href}
+                href={href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg text-gray-400 dark:text-gray-500 hover:text-emerald-500 dark:hover:text-emerald-400 hover:bg-emerald-500/10 transition-all duration-300"

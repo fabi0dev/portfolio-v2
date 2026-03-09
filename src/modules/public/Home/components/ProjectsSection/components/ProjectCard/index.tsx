@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ExternalLink, Github } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 interface ProjectCardProps {
   title: string;
@@ -38,7 +38,7 @@ export default function ProjectCard({
           </h3>
           <div className="flex gap-1">
             {link.deploy && (
-              <Link to={link.deploy} target="_blank">
+              <Link href={link.deploy} target="_blank">
                 <Button
                   size="icon"
                   variant="ghost"
@@ -49,7 +49,7 @@ export default function ProjectCard({
               </Link>
             )}
             {link.github && (
-              <Link to={link.github} target="_blank">
+              <Link href={link.github} target="_blank">
                 <Button
                   size="icon"
                   variant="ghost"

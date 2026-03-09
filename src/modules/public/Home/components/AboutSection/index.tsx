@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { MyLinks } from "@/data/MyLinks";
 import { Github, Linkedin } from "lucide-react";
 import { useMemo } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function AboutSection() {
@@ -106,7 +106,7 @@ export default function AboutSection() {
 
             <div className="flex gap-3 mt-8">
               {LINKS.map(({ href, Icon, label }) => (
-                <Link key={label} to={href} target="_blank">
+                <Link key={label} href={href} target="_blank">
                   <Button
                     variant="outline"
                     size="icon"

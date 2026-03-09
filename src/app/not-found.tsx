@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+'use client';
 
-export const NotFound = () => {
+import Link from 'next/link';
+
+export default function NotFound() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-black text-gray-900 dark:text-white px-4">
       <h1 className="text-6xl font-bold mb-4">404</h1>
@@ -9,11 +11,12 @@ export const NotFound = () => {
         Você parou em um lugar que não existe.
       </p>
       <Link
-        to="/"
+        href="/"
         className="text-green-500 hover:underline text-sm transition duration-300"
       >
         Volte para casa
       </Link>
     </div>
   );
-};
+}
+
