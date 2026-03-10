@@ -108,12 +108,17 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-wrap gap-4 justify-center"
           >
-            <a href="#projects">
-              <Button className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-5 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25">
-                <Mail className="mr-2 h-4 w-4" />
-                Falar comigo
-              </Button>
-            </a>
+            <Button
+              className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-5 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25"
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.dispatchEvent(new Event("open-contact"));
+                }
+              }}
+            >
+              <Mail className="mr-2 h-4 w-4" />
+              Falar comigo
+            </Button>
             <Link href={MyLinks.Linkedin} target="_blank">
               <Button
                 variant="outline"

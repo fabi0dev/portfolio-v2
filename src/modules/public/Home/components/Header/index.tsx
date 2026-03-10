@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { useTheme } from "@/hooks/useTheme";
 import { ChevronsUp, Moon, Sun } from "lucide-react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const { toggleTheme, theme } = useTheme();
@@ -19,6 +19,16 @@ export default function Header() {
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrollYPos(latest);
   });
+
+  useEffect(() => {
+    const handleOpenContact = () => setIsContactOpen(true);
+
+    window.addEventListener("open-contact", handleOpenContact);
+
+    return () => {
+      window.removeEventListener("open-contact", handleOpenContact);
+    };
+  }, []);
 
   const navItems = [
     { href: "#about", label: "Sobre" },
