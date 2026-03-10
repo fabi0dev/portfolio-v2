@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Site } from "@/data/Site";
+import { VisitTracker } from "@/components/analytics/VisitTracker";
 
 const siteUrl = Site.Url;
 
@@ -90,6 +91,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="pt-BR">
       <body>
+        <VisitTracker />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
