@@ -92,10 +92,7 @@ export default function Header() {
           >
             fabio
             <span className="text-emerald-500 dark:text-emerald-400 group-hover:text-glow transition-all">
-              dev
-            </span>
-            <span className="text-emerald-500 dark:text-emerald-400 animate-pulse">
-              _
+              costa_
             </span>
           </a>
 
