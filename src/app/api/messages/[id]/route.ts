@@ -3,16 +3,18 @@ import { prisma } from "@/lib/prisma";
 import { requireAuth } from "@/lib/auth";
 import { ContactStatus } from "@prisma/client";
 
-interface Params {
-  params: {
+type RouteContext = {
+  params: Promise<{
     id: string;
-  };
-}
+  }>;
+};
 
-export async function PATCH(request: NextRequest, { params }: Params) {
+export async function PATCH(request: NextRequest, context: RouteContext) {
   try {
     await requireAuth();
     const body = await request.json();
+
+    const { id } = await context.params;
 
     const status = body.status as ContactStatus | undefined;
 
@@ -21,7 +23,7 @@ export async function PATCH(request: NextRequest, { params }: Params) {
     }
 
     const message = await prisma.contactMessage.update({
-      where: { id: params.id },
+      where: { id },
       data: { status },
     });
 

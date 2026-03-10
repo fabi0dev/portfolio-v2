@@ -2,16 +2,18 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { requireAuth } from "@/lib/auth";
 
-interface Params {
-  params: {
+type RouteContext = {
+  params: Promise<{
     id: string;
-  };
-}
+  }>;
+};
 
-export async function PUT(request: NextRequest, { params }: Params) {
+export async function PUT(request: NextRequest, context: RouteContext) {
   try {
     await requireAuth();
     const body = await request.json();
+
+    const { id } = await context.params;
 
     const title = typeof body.title === "string" ? body.title.trim() : undefined;
     const description =
@@ -34,7 +36,7 @@ export async function PUT(request: NextRequest, { params }: Params) {
     if (order !== undefined) data.order = order;
 
     const project = await prisma.project.update({
-      where: { id: params.id },
+      where: { id },
       data,
     });
 
@@ -51,12 +53,14 @@ export async function PUT(request: NextRequest, { params }: Params) {
   }
 }
 
-export async function DELETE(_request: NextRequest, { params }: Params) {
+export async function DELETE(_request: NextRequest, context: RouteContext) {
   try {
     await requireAuth();
 
+    const { id } = await context.params;
+
     await prisma.project.delete({
-      where: { id: params.id },
+      where: { id },
     });
 
     return NextResponse.json({ message: "Projeto removido com sucesso." });
