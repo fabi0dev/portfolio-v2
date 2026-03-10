@@ -103,14 +103,6 @@ export default function Header() {
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-emerald-500 group-hover:w-1/2 transition-all duration-300" />
               </motion.a>
             ))}
-            <Button
-              type="button"
-              size="sm"
-              variant="outline"
-              onClick={() => setIsContactOpen(true)}
-            >
-              Contate-me
-            </Button>
           </nav>
 
           <div className="flex items-center gap-3">
@@ -184,6 +176,7 @@ export default function Header() {
                   onChange={(e) => setEmail(e.target.value)}
                   autoComplete="email"
                   required
+                  placeholder="Seu e-mail"
                   className="bg-white border-gray-300 text-gray-900 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-100"
                 />
               </div>
@@ -197,6 +190,7 @@ export default function Header() {
                   rows={5}
                   required
                   className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 outline-none focus:ring-1 focus:ring-emerald-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+                  placeholder="Sua mensagem"
                 />
               </div>
               {error && (

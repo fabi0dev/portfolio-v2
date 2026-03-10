@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MyLinks } from "@/data/MyLinks";
-import { ArrowDown, ArrowRight, Linkedin } from "lucide-react";
+import { ArrowDown, Linkedin, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useMotionValueEvent, useScroll, motion } from "framer-motion";
@@ -94,9 +94,12 @@ export default function HeroSection() {
             className="text-lg md:text-xl text-gray-500 dark:text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
             Desenvolvedor sênior especializado em{" "}
-            <span className="text-emerald-600 dark:text-emerald-400">web</span> e{" "}
-            <span className="text-emerald-600 dark:text-emerald-400">mobile</span>.
-            Construo experiências digitais rápidas, acessíveis e excepcionais.
+            <span className="text-emerald-600 dark:text-emerald-400">web</span>{" "}
+            e{" "}
+            <span className="text-emerald-600 dark:text-emerald-400">
+              mobile
+            </span>
+            . Construo experiências digitais rápidas, acessíveis e excepcionais.
           </motion.p>
 
           <motion.div
@@ -107,7 +110,8 @@ export default function HeroSection() {
           >
             <a href="#projects">
               <Button className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-5 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25">
-                Meus Projetos <ArrowRight className="ml-2 h-4 w-4" />
+                <Mail className="mr-2 h-4 w-4" />
+                Falar comigo
               </Button>
             </a>
             <Link href={MyLinks.Linkedin} target="_blank">
@@ -136,7 +140,7 @@ export default function HeroSection() {
           href="#about"
           className="flex flex-col items-center gap-2 text-gray-400 dark:text-gray-500 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
         >
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
+          <span className="text-xs uppercase tracking-widest">Rolar</span>
           <ArrowDown className="h-5 w-5 animate-bounce" />
         </a>
       </motion.div>
