@@ -148,18 +148,30 @@ function Sidebar({
   const pathname = usePathname();
 
   const items = [
-    { href: "/dash", label: "Skills" },
-    { href: "/dash/projects", label: "Projetos" },
     {
       href: "/dash/inbox",
       label: "Caixa de entrada",
     },
-    { href: "/dash/visits", label: "Visitas" },
-    { href: "/dash/settings", label: "Configurações" },
+    {
+      href: "/dash/skills",
+      label: "Skills",
+    },
+    {
+      href: "/dash/projects",
+      label: "Projetos",
+    },
+    {
+      href: "/dash/visits",
+      label: "Visitas",
+    },
+    {
+      href: "/dash/settings",
+      label: "Configurações",
+    },
   ];
 
   return (
-    <aside className="rounded-xl border border-slate-800 bg-slate-900/60 p-3 md:p-4">
+    <aside className="rounded-2xl border border-slate-800 bg-slate-900/70 p-3 md:p-4">
       <nav className="flex flex-col gap-2">
         {items.map((item) => {
           const isActive =
@@ -170,27 +182,27 @@ function Sidebar({
             <Link
               key={item.href}
               href={item.href}
-              className={`flex-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors md:flex-none ${
+              className={`group rounded-xl border px-3 py-2.5 text-xs transition-colors ${
                 isActive
-                  ? "bg-emerald-500 text-black shadow-sm"
-                  : "text-slate-300 hover:bg-slate-800 hover:text-white"
+                  ? "border-emerald-500/70 bg-emerald-500/10 text-emerald-100 shadow-sm"
+                  : "border-transparent bg-slate-950/40 text-slate-300 hover:border-slate-700 hover:bg-slate-900"
               }`}
             >
-              <span className="flex items-center justify-between gap-2">
-                <span>{item.label}</span>
+              <div className="flex items-center justify-between gap-2">
+                <p className="text-sm font-medium">{item.label}</p>
                 {item.href === "/dash/inbox" && unreadCount > 0 && (
                   <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[11px] font-semibold text-emerald-400">
                     {unreadCount}
                   </span>
                 )}
-              </span>
+              </div>
             </Link>
           );
         })}
         <button
           type="button"
           onClick={onLogout}
-          className="mt-4 inline-flex items-center justify-center rounded-lg border border-slate-700 px-3 py-2 text-sm font-medium text-slate-200 hover:bg-slate-800"
+          className="mt-4 inline-flex items-center justify-center rounded-xl border border-slate-700 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-900"
         >
           Sair
         </button>
@@ -288,9 +300,16 @@ export default function DashLayout({ children }: DashboardLayoutProps) {
       }}
     >
       <div className="min-h-screen bg-slate-950 text-slate-100">
-        <header className="border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+        <header className="border-b border-slate-800 bg-slate-950/90 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-            <div />
+            <div className="space-y-0.5">
+              <h1 className="text-xl font-semibold text-slate-50 md:text-2xl">
+                Dashboard
+              </h1>
+              <p className="text-xs text-slate-400 md:text-sm">
+                Painel interno do seu portfólio.
+              </p>
+            </div>
           </div>
         </header>
 

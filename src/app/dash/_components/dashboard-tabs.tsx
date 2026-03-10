@@ -4,6 +4,10 @@ import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
+  getBrowserName,
+  getDeviceInfo,
+} from "@/app/dash/_utils/user-agent";
+import {
   useDashboardData,
   type Message,
   type Project,
@@ -566,7 +570,7 @@ export function MessagesTab() {
   const [selectedMessage, setSelectedMessage] = useState<Message | null>(null);
   const [statusFilter, setStatusFilter] = useState<
     "all" | "unread" | "read" | "archived"
-  >("all");
+  >("unread");
   const [search, setSearch] = useState("");
 
   async function updateStatus(id: string, status: Message["status"]) {
@@ -868,10 +872,34 @@ export function MessagesTab() {
                   </p>
                 )}
                 {selectedMessage.userAgent && (
-                  <p className="break-words">
-                    <span className="text-slate-400">Navegador:</span>{" "}
-                    {selectedMessage.userAgent}
-                  </p>
+                  <>
+                    <p>
+                      <span className="text-slate-400">Navegador:</span>{" "}
+                      <span className="text-slate-100">
+                        {getBrowserName(selectedMessage.userAgent)}
+                      </span>
+                    </p>
+                    <p>
+                      <span className="text-slate-400">Dispositivo:</span>{" "}
+                      {(() => {
+                        const { deviceType, os } = getDeviceInfo(
+                          selectedMessage.userAgent,
+                        );
+                        return (
+                          <span className="text-slate-100">
+                            {deviceType}
+                            {os !== "Desconhecido" ? ` • ${os}` : ""}
+                          </span>
+                        );
+                      })()}
+                    </p>
+                    <p className="break-words">
+                      <span className="text-slate-400">User agent completo:</span>{" "}
+                      <span className="text-[11px] text-slate-300">
+                        {selectedMessage.userAgent}
+                      </span>
+                    </p>
+                  </>
                 )}
               </div>
             </div>
